@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>7.0</ProjectVersion>
+    <ToolchainName>com.Atmel.AVRGCC32.C</ToolchainName>
+    <ProjectGuid>dce6c7e3-ee26-4d79-826b-08594b9ad897</ProjectGuid>
+    <avrdevice>AT32UC3C2512C</avrdevice>
+    <avrdeviceseries>none</avrdeviceseries>
+    <OutputType>StaticLibrary</OutputType>
+    <Language>C</Language>
+    <OutputFileName>lib$(MSBuildProjectName)</OutputFileName>
+    <OutputFileExtension>.a</OutputFileExtension>
+    <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
+    <AvrGccProjectExtensions>
+    </AvrGccProjectExtensions>
+    <AssemblyName>DiagnosticModule</AssemblyName>
+    <Name>DiagnosticModule</Name>
+    <RootNamespace>DiagnosticModule</RootNamespace>
+    <ToolchainFlavour>Native</ToolchainFlavour>
+    <KeepTimersRunning>true</KeepTimersRunning>
+    <OverrideVtor>false</OverrideVtor>
+    <CacheFlash>true</CacheFlash>
+    <ProgFlashFromRam>true</ProgFlashFromRam>
+    <RamSnippetAddress>0x20000000</RamSnippetAddress>
+    <UncachedRange />
+    <preserveEEPROM>true</preserveEEPROM>
+    <OverrideVtorValue>exception_table</OverrideVtorValue>
+    <BootSegment>2</BootSegment>
+    <eraseonlaunchrule>0</eraseonlaunchrule>
+    <AsfFrameworkConfig>
+      <framework-data xmlns="">
+        <options />
+        <configurations />
+        <files />
+        <documentation help="" />
+        <offline-documentation help="" />
+        <dependencies>
+          <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.34.1" />
+        </dependencies>
+      </framework-data>
+    </AsfFrameworkConfig>
+    <ResetRule>0</ResetRule>
+    <EraseKey />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <ToolchainSettings>
+      <Avr32Gcc>
+        <avr32gcc.common.outputfiles.hex>True</avr32gcc.common.outputfiles.hex>
+        <avr32gcc.common.outputfiles.lss>True</avr32gcc.common.outputfiles.lss>
+        <avr32gcc.common.outputfiles.eep>True</avr32gcc.common.outputfiles.eep>
+        <avr32gcc.common.outputfiles.srec>True</avr32gcc.common.outputfiles.srec>
+        <avr32gcc.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>NDEBUG</Value>
+          </ListValues>
+        </avr32gcc.compiler.symbols.DefSymbols>
+        <avr32gcc.compiler.directories.IncludePaths>
+          <ListValues>
+            <Value>%24(PackRepoDir)\atmel\UC3C_DFP\1.0.49\include\AT32UC3C2512C</Value>
+            <Value>..</Value>
+          </ListValues>
+        </avr32gcc.compiler.directories.IncludePaths>
+        <avr32gcc.compiler.optimization.level>Optimize (-O1)</avr32gcc.compiler.optimization.level>
+        <avr32gcc.compiler.optimization.PrepareFunctionsForGarbageCollection>True</avr32gcc.compiler.optimization.PrepareFunctionsForGarbageCollection>
+        <avr32gcc.compiler.optimization.UseAssemblerForPseudoInstructions>True</avr32gcc.compiler.optimization.UseAssemblerForPseudoInstructions>
+        <avr32gcc.compiler.warnings.AllWarnings>True</avr32gcc.compiler.warnings.AllWarnings>
+        <avr32gcc.compiler.warnings.ExtraWarnings>True</avr32gcc.compiler.warnings.ExtraWarnings>
+        <avr32gcc.compiler.warnings.Undefined>True</avr32gcc.compiler.warnings.Undefined>
+        <avr32gcc.compiler.warnings.WarningsAsErrors>True</avr32gcc.compiler.warnings.WarningsAsErrors>
+        <avr32gcc.linker.libraries.Libraries>
+          <ListValues>
+            <Value>libm</Value>
+          </ListValues>
+        </avr32gcc.linker.libraries.Libraries>
+        <avr32gcc.linker.optimization.GarbageCollectUnusedSections>True</avr32gcc.linker.optimization.GarbageCollectUnusedSections>
+        <avr32gcc.linker.optimization.PutReadOnlyDataInWritableDataSection>True</avr32gcc.linker.optimization.PutReadOnlyDataInWritableDataSection>
+        <avr32gcc.linker.optimization.AllowDirectReferencesToDataSection>True</avr32gcc.linker.optimization.AllowDirectReferencesToDataSection>
+        <avr32gcc.assembler.general.IncludePaths>
+          <ListValues>
+            <Value>%24(PackRepoDir)\atmel\UC3C_DFP\1.0.49\include\AT32UC3C2512C</Value>
+          </ListValues>
+        </avr32gcc.assembler.general.IncludePaths>
+        <avr32gcc.preprocessingassembler.general.IncludePaths>
+          <ListValues>
+            <Value>%24(PackRepoDir)\atmel\UC3C_DFP\1.0.49\include\AT32UC3C2512C</Value>
+          </ListValues>
+        </avr32gcc.preprocessingassembler.general.IncludePaths>
+      </Avr32Gcc>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="clock\" />
+    <Folder Include="comm\" />
+    <Folder Include="diagnostic_module\" />
+    <Folder Include="flash\" />
+    <Folder Include="protocol\" />
+    <Folder Include="utils\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="clock\pll.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="clock\pll.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="clock\wait.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="clock\wait.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="comm\bt.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="comm\bt.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="comm\usart.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="comm\usart.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="diagnostic_module\debug.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="diagnostic_module\debug.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="diagnostic_module\diagnostic_module.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="diagnostic_module\diagnostic_module.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="diagnostic_module\firmware_identification.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="diagnostic_module\firmware_identification.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="diagnostic_module\parameters.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="flash\exec.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="flash\exec.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="flash\flash.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="flash\flash.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="protocol\data.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="protocol\data.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="protocol\frame.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="protocol\frame.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="protocol\return_codes.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utils\byte_buffer.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utils\crc32q.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utils\crc32q.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utils\system_registers.h">
+      <SubType>compile</SubType>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
+</Project>

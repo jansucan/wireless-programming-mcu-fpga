@@ -1,0 +1,260 @@
+This file contains three licences covering the files on this CD. License of
+
+  - All files not covered by the next two licenses (line 14)
+
+  - The function for computaion of CRC32 in DiagnosticModule library (line 44)
+
+  - DirectC from Microsemi Corporation (line 185)
+
+
++-----------------------------------------------------------------------------+
+| License of all files not covered by the next two licenses                   |
++-----------------------------------------------------------------------------+
+
+I acknowledge that my thesis is subject to the rights and obligations
+stipulated by the Act No. 121/2000 Coll., the Copyright Act, as
+amended, in particular that the Czech Technical University in Prague
+has the right to conclude a license agreement on the utilization of
+this thesis as school work under the provisions of Article 60(1) of
+the Act.
+
+I further grant a nonexclusive authorization (license) to utilize this
+thesis, including any and all computer programs incorporated therein
+or attached thereto and all corresponding documentation (hereinafter
+collectively referred to as the “Work”), to AŽD Praha
+s.r.o. company. AŽD Praha s.r.o. is entitled to use the Work in any
+way (including for-profit purposes) that does not detract from its
+value. This authorization is not limited in terms of time, location
+and quantity.“
+
+
++-----------------------------------------------------------------------------+
+| License of the function for computation of CRC32                            |
+|                                                                             |
+|   URL: https://svnweb.freebsd.org/base/stable/9/sys/libkern/crc32.c?        |
+|        revision=225736&view=co                                              |
+|     Function:  static uint32_t singletable_crc32c(uint32_t crc,             |
+|                                                   const void *buf,          |
+|                                                   size_t size)              |
+|                                                                             |
+|   Local file: impl/DiagnosticModule/DiagnosticModule/utils/crc32q.c     |
+|     Function: uint32_t crc32q(const void * const buf, size_t size)          |
++-----------------------------------------------------------------------------+
+
+# $FreeBSD$
+#	@(#)COPYRIGHT	8.2 (Berkeley) 3/21/94
+
+The compilation of software known as FreeBSD is distributed under the
+following terms:
+
+Copyright (c) 1992-2016 The FreeBSD Project. All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are
+met:
+1. Redistributions of source code must retain the above copyright
+   notice, this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright
+   notice, this list of conditions and the following disclaimer in the
+   documentation and/or other materials provided with the
+   distribution.
+
+THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS ``AS IS'' AND
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS
+BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
+BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
+IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+The 4.4BSD and 4.4BSD-Lite software is distributed under the following
+terms:
+
+All of the documentation and software included in the 4.4BSD and
+4.4BSD-Lite Releases is copyrighted by The Regents of the University
+of California.
+
+Copyright 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California.  All rights
+	reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are
+met:
+1. Redistributions of source code must retain the above copyright
+   notice, this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright
+   notice, this list of conditions and the following disclaimer in the
+   documentation and/or other materials provided with the
+   distribution.
+3. All advertising materials mentioning features or use of this
+   software must display the following acknowledgement:
+This product includes software developed by the University of
+California, Berkeley and its contributors.
+4. Neither the name of the University nor the names of its
+   contributors may be used to endorse or promote products derived
+   from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE REGENTS AND CONTRIBUTORS ``AS IS''
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO,
+THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS
+BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
+BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
+IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+The Institute of Electrical and Electronics Engineers and the American
+National Standards Committee X3, on Information Processing Systems
+have given us permission to reprint portions of their documentation.
+
+In the following statement, the phrase ``this text'' refers to
+portions of the system documentation.
+
+Portions of this text are reprinted and reproduced in electronic form
+in the second BSD Networking Software Release, from IEEE Std
+1003.1-1988, IEEE Standard Portable Operating System Interface for
+Computer Environments (POSIX), copyright C 1988 by the Institute of
+Electrical and Electronics Engineers, Inc.  In the event of any
+discrepancy between these versions and the original IEEE Standard, the
+original IEEE Standard is the referee document.
+
+In the following statement, the phrase ``This material'' refers to
+portions of the system documentation.
+
+This material is reproduced with permission from American National
+Standards Committee X3, on Information Processing Systems.  Computer
+and Business Equipment Manufacturers Association (CBEMA), 311 First
+St., NW, Suite 500, Washington, DC 20001-2178.  The developmental work
+of Programming Language C was completed by the X3J11 Technical
+Committee.
+
+The views and conclusions contained in the software and documentation
+are those of the authors and should not be interpreted as representing
+official policies, either expressed or implied, of the Regents of the
+University of California.
+
+
+NOTE: The copyright of UC Berkeley's Berkeley Software Distribution
+("BSD") source has been updated.  The copyright addendum may be found
+at ftp://ftp.cs.berkeley.edu/pub/4bsd/README.Impt.License.Change and
+is included below.
+
+July 22, 1999
+
+To All Licensees, Distributors of Any Version of BSD:
+
+As you know, certain of the Berkeley Software Distribution ("BSD")
+source code files require that further distributions of products
+containing all or portions of the software, acknowledge within their
+advertising materials that such products contain software developed by
+UC Berkeley and its contributors.
+
+Specifically, the provision reads:
+
+"     * 3. All advertising materials mentioning features or use of this
+      *    software must display the following acknowledgement:
+      *    This product includes software developed by the University of
+      *    California, Berkeley and its contributors."
+
+Effective immediately, licensees and distributors are no longer
+required to include the acknowledgement within advertising materials.
+Accordingly, the foregoing paragraph of those BSD Unix files
+containing it is hereby deleted in its entirety.
+
+William Hoskins
+Director, Office of Technology Licensing
+University of California, Berkeley
+
++-----------------------------------------------------------------------------+
+| License of DirectC from Microsemi Corporation                               |
+|                                                                             |
+|   URL: https://www.microsemi.com/product-directory/programming/             |
+|        4980-embedded-programming#downloads                                  |
+|                                                                             |
+|   Local directory: impl/DMAppFpgaProg/DMAppFpgaProg/DirectC/            |
++-----------------------------------------------------------------------------+
+
+/* ************ MICROSEMI SOC CORP. DIRECTC LICENSE AGREEMENT ************* */
+/* ------------------------------------------------------------------------
+
+PLEASE READ: BEFORE INSTALLING THIS SOFTWARE, CAREFULLY READ THE
+FOLLOWING MICROSEMI SOC CORP LICENSE AGREEMENT REGARDING THE USE OF
+THIS SOFTWARE.  INSTALLING THIS SOFTWARE INDICATES THAT YOU ACCEPT AND
+UNDERSTAND THIS AGREEMENT AND WILL ABIDE BY IT.
+
+Note: This license agreement (“License”) only includes the following
+software: DirectC. DirectC is licensed under the following terms and
+conditions.
+
+Hereinafter, Microsemi SoC Corp. shall be referred to as “Licensor” or
+“Author,” whereas the other party to this License shall be referred to
+as “Licensee.” Each party to this License shall be referred to,
+singularly, as a “Party,” or, collectively, as the “Parties.”
+
+Permission to use, copy, modify, and/or distribute DirectC for any
+purpose, with or without fee, is hereby granted by Licensor to
+Licensee, provided that the above Copyright notice and this permission
+notice appear in all copies, modifications and/or distributions of
+DirectC.
+
+DIRECTC IS PROVIDED "AS IS" AND THE AUTHOR/LICENSOR DISCLAIMS ALL
+WARRANTIES WITH REGARD TO DIRECTC INCLUDING ALL IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL AUTHOR/LICENSOR BE
+LIABLE TO LICENSEE FOR ANY DAMAGES, INCLUDING SPECIAL,
+DIRECT,INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER
+RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF
+CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
+CONNECTION WITH THE USE OR PERFORMANCE OF DIRECTC.
+
+Export Control: Information furnished to Licensee may include United
+States origin technical data. Accordingly, Licensee is responsible for
+complying with, and warrants to Licensor that it will comply with, all
+U.S. export control laws and regulations, including the provisions of
+the Export Administration Act of 1979 and the Export Administration
+Regulations promulgated thereunder, the Arms Export Control Act, and
+the sanctions laws administered by the Office of Foreign Assets
+Control including any other U.S. Government regulation applicable to
+the export, re-export, or disclosure of such controlled technical data
+(or the products thereof) to Foreign Nationals, whether within or
+without the U.S., including those employed by, or otherwise associated
+with, Licensee. Licensee shall obtain Licensor’s written consent prior
+to submitting any request for authority to export any such technical
+data.
+
+ADR: Any dispute between the Parties arising from or related to this
+License or the subject matter hereof, including its validity,
+construction or performance thereunder, shall be exclusively resolved
+through arbitration by a mutually acceptable impartial and neutral
+arbitrator appointed by the Judicial Arbitration and Mediation
+Services (JAMS) in accordance with its rules and procedures. If the
+Parties are not able to agree on an arbitrator within 10 days of the
+date of request for mediation is served, then JAMS shall appoint an
+arbitrator. Notice of arbitration shall be served and filed with the
+JAMS main offices in Irvine, California. Each Party shall be
+responsible for all costs associated with the preparation and
+representation by attorneys, or any other persons retained thereby, to
+assist in connection with any such Arbitration.  However, all costs
+charged by the mutually agreed upon Arbitration entity shall be
+equally shared by the Parties. The Party seeking Mediation and/or
+Arbitration as provided herein agrees that the venue for any such
+Mediation and Arbitration shall be selected by the other Party and
+that such venue must be Los Angeles, California; New York, New York;
+or Chicago, Illinois; whereby the applicable law and provisions of the
+Evidence Code of the State selected thereby shall be applicable and
+shall govern the validity, construction and performance of this
+License.
+
+Governing Law: This license will be governed by the laws of the State
+of California, without regard to its conflict of law provisions.
+
+Entire Agreement: This document constitutes the entire agreement
+between the Parties with respect to the subject matter herein and
+supersedes all other communications whether written or oral.  */
