@@ -1,3 +1,10 @@
+***
+
+**This is a frozen project. It is intended to provide authentic snapshot of the
+history with all the good things and all the things that could be improved.**
+
+***
+
 # Programming of AT32UC3C family of microcontrollers and IGLOO nano FPGAs through Bluetooth
 
 This is my master's thesis at Faculty of Information Technology at
